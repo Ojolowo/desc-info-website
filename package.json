@@ -1,5 +1,5 @@
 {
-  "name": "type-app",
+  "name": "desc-web",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,10 +10,21 @@
   "dependencies": {
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/react": "^17.0.37",
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.7"
-  }
+    "eslint-config-next": "12.0.7",
+    "typescript": "^4.5.2"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "version": "1.0.0",
+  "main": "next.config.js",
+  "keywords": [
+    "desc"
+  ],
+  "author": "Ojolowo",
+  "license": "ISC"
 }
