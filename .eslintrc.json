@@ -1,3 +1,61 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+     "jest": true,
+     "node": true,
+     "browser": true,
+     "es2021": true
+  },
+  "extends": ["next", "next/core-web-vitals", "plugin:jsx-a11y/recommended", "prettier"],
+  "plugins": ["jsx-a11y", "prettier"],
+  "rules": {
+     "prettier/prettier": "off",
+     "react/display-name": "off",
+     "@next/next/no-img-element": "off",
+     "react/no-unescaped-entities": "off",
+     "import/extensions": "off",
+     "import/no-unresolved": "off",
+     "import/order": [
+        "error",
+        {
+           "groups": ["builtin", "external", "internal", ["parent", "sibling", "object", "index"]],
+           "pathGroups": [
+              {
+                 "pattern": "react",
+                 "group": "external",
+                 "position": "before"
+              }
+           ],
+           "pathGroupsExcludedImportTypes": ["react"],
+           "newlines-between": "never",
+           "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+           }
+        }
+     ],
+     "import/no-extraneous-dependencies": [
+        "off",
+        {
+           "devDependencies": [
+              "jest.setup.ts",
+              "**/*.test.tsx",
+              "**/*.spec.tsx",
+              "**/*.test.ts",
+              "**/*.spec.ts"
+           ]
+        }
+     ],
+     "jsx-a11y/anchor-is-valid": "off"
+  },
+  "settings": {
+     "react": {
+        "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+     },
+     "import/resolver": {
+        // use <root>/tsconfig.json
+        "typescript": {
+           "project": "."
+        }
+     }
+  }
 }
