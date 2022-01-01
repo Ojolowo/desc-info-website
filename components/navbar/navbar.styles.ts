@@ -40,12 +40,15 @@ export const NavbarWrapper = styled.header`
       display: flex;
       flex-direction: column;
       align-items: center;
-      grid-gap: 3em;
       z-index: 1500;
       transition: all 300ms ease-in-out;
       color: white;
       list-style-type: none;
       box-sizing: border-box;
+
+      & > * + * {
+         margin-top: 3em;
+      }
 
       a {
          color: ${({ theme }) => theme.link};
@@ -130,8 +133,11 @@ export const NavbarWrapper = styled.header`
 
       .large-nav-links {
          display: flex;
-         grid-gap: 1em;
          align-items: center;
+
+         & > * {
+            margin: 0 1em;
+         }
       }
    }
 `;

@@ -18,8 +18,11 @@ export const FooterWrapper = styled.footer`
 export const Socials = styled.ul`
    display: flex;
    align-items: center;
-   grid-gap: 2em;
    list-style: none;
+
+   & > * + * {
+      margin-left: 2em;
+   }
 
    & li {
       cursor: pointer;
