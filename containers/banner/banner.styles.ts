@@ -18,7 +18,7 @@ export const BannerWrapper = styled.div`
 export const LeftContent = styled.div`
    display: flex;
    flex-direction: column;
-   gap: 1em;
+   grid-gap: 1em;
    align-items: flex-start;
    justify-content: center;
 `;

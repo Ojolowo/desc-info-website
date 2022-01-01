@@ -61,8 +61,9 @@ export const SubscribeWrapper = styled.section<{ url: string }>`
          }
 
          .newsletter__submit-button {
-            background: #0045ac;
+            background-color: #0045ac;
             border-radius: 20px;
+            height: 40px;
             border: none;
             color: white;
             font-weight: 800;

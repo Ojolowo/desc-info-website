@@ -98,7 +98,7 @@ export const TestimonialsWrapper = styled.section`
 
     .author-info {
         display: flex;
-        gap: 10px;
+        grid-gap: 1em;
         align-items: center;
         margin-top: 20px;
 

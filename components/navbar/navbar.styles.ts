@@ -40,7 +40,7 @@ export const NavbarWrapper = styled.header`
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 3em;
+      grid-gap: 3em;
       z-index: 1500;
       transition: all 300ms ease-in-out;
       color: white;
@@ -130,7 +130,7 @@ export const NavbarWrapper = styled.header`
 
       .large-nav-links {
          display: flex;
-         gap: 15px;
+         grid-gap: 1em;
          align-items: center;
       }
    }

@@ -11,14 +11,14 @@ export const FooterWrapper = styled.footer`
 
    @media screen and (max-width: 478px) {
       flex-direction: column;
-      gap: 2em;
+      grid-gap: 2em;
    }
 `;
 
 export const Socials = styled.ul`
    display: flex;
    align-items: center;
-   gap: 2em;
+   grid-gap: 2em;
    list-style: none;
 
    & li {
