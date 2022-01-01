@@ -11,7 +11,10 @@ export const FooterWrapper = styled.footer`
 
    @media screen and (max-width: 478px) {
       flex-direction: column;
-      grid-gap: 2em;
+
+      & > * {
+         margin-top: 2em;
+      }
    }
 `;
 
