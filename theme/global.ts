@@ -1,5 +1,4 @@
-import {createGlobalStyle} from "styled-components"
-import {lightMode, darkMode} from "./themes"
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -8,4 +7,4 @@ export const GlobalStyles = createGlobalStyle`
 font-family: Poppins, sans-serif;
     transition: all 0.50s linear;
   }
-`
+`;

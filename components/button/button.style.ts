@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { colors } from "theme/colors";
-import { medium, bold } from "theme/font-weights";
+import { bold } from "theme/font-weights";
 import { IButtonEmotionProps } from "./i-button";
 
 function variantButtonStyles({ variant }: IButtonEmotionProps) {
