@@ -98,9 +98,12 @@ export const TestimonialsWrapper = styled.section`
 
     .author-info {
         display: flex;
-        grid-gap: 1em;
         align-items: center;
         margin-top: 20px;
+
+        & > * {
+            margin-right: 1em;
+        }
 
         .display-photo {
         width: 40px;
