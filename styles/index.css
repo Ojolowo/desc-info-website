@@ -29,8 +29,10 @@ body {
 
 .toggler {
    position: absolute;
-   top: 20%;
-   left: 2em;
+   top: 27px;
+   left: 30%;
+   z-index: 10000;
+   justify-self: center;
 }
 
 .toggle--checkbox {
