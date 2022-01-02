@@ -20,6 +20,7 @@ export const TextsWrapper = styled.div`
    .sub-heading-sm {
       padding-top: 20px;
       padding-bottom: 90px;
+      max-width: 350px;
    }
 `;
 

@@ -28,7 +28,7 @@ body {
 }
 
 .toggler {
-   position: absolute;
+   position: fixed;
    top: 27px;
    left: 30%;
    z-index: 10000;
