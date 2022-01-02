@@ -13,6 +13,7 @@ export const lightMode = {
    card: "#FFFFFF",
    testimonials: "#FFFFFF",
    gallery: "#FCFCFD",
+   teamHeader: "#F8F9FB",
 };
 
 export const darkMode = {
@@ -30,4 +31,5 @@ export const darkMode = {
    card: "#252B42",
    testimonials: "#090923",
    gallery: "#08072E",
+   teamHeader: "#08072E",
 };

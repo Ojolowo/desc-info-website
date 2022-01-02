@@ -25,5 +25,6 @@ declare module "styled-components" {
       card: string;
       testimonials: string;
       gallery: string;
+      teamHeader: string;
    }
 }
