@@ -24,5 +24,6 @@ declare module "styled-components" {
       toggler: string;
       card: string;
       testimonials: string;
+      gallery: string;
    }
 }
