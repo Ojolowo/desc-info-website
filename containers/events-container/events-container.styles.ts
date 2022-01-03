@@ -3,9 +3,9 @@ import { globalPadding } from "theme/spacing";
 
 export const EventsWrapper = styled.section`
    display: flex;
-   height: 90vh;
+   height: 100vh;
    justify-content: center;
-   padding: 100px ${globalPadding};
+   padding: 50px ${globalPadding};
    padding-bottom: 0;
    background: ${({ theme }) => theme.primaryBackground};
 
@@ -20,6 +20,7 @@ export const EventsWrapper = styled.section`
          display: flex;
          flex-direction: column;
          align-items: center;
+         justify-content: center;
       }
 
       .newsletter-h1 {
