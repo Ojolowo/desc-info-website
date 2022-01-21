@@ -26,6 +26,7 @@ const JoinForm = () => {
 
    const onSubmit = (values) => {
       setIsLoading(true);
+      console.log(values);
    };
 
    function validate() {
