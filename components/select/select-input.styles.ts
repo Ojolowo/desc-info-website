@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "theme/colors";
 
-export const SelectInputComponentStyle = styled.div<{ error?: boolean; banner?: boolean }>`
+export const SelectInputComponentStyle = styled.div<{ error?: boolean }>`
    width: 100%;
    .react-select__value-container
       .react-select__value-container--is-multi

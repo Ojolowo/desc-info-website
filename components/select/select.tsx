@@ -3,11 +3,11 @@ import { Div, ErrorP, InputFieldWrapperDiv, Label } from "components/input/input
 import { ISelectInput } from "./i-select";
 import { SelectInputComponentStyle } from "./select-input.styles";
 
-const SelectInput = ({ label, error, banner, required, ...rest }: ISelectInput) => {
+const SelectInput = ({ label, error, required, ...rest }: ISelectInput) => {
    return (
       <Div>
          <InputFieldWrapperDiv>
-            <SelectInputComponentStyle banner={banner} error={!!error} className="other-selct">
+            <SelectInputComponentStyle error={!!error} className="other-selct">
                {label && <Label className="select-label">{`${label}${required ? "*" : ""}`}</Label>}
                <Select
                   styles={{ menuPortal: (base) => ({ ...base, zIndex: 100 }) }}
