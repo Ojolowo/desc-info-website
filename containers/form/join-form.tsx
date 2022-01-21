@@ -102,7 +102,7 @@ const JoinForm = () => {
                            id="speciallization"
                            label="Join as"
                            placeholder="Select Specialization"
-                           onChange={(data) => onChange(data?.value)}
+                           onChange={(data: any) => onChange(data?.value)}
                            required={true}
                            options={specializations}
                            defaultValue={specializations[0]}
