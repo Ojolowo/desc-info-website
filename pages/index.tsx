@@ -1,3 +1,4 @@
+import { Navbar } from "components/navbar";
 import { Banner } from "containers/banner";
 import { Connect } from "containers/connect";
 import { Features } from "containers/features";
@@ -8,6 +9,7 @@ import { Testimonials } from "containers/testimonials";
 export default function Home() {
    return (
       <div>
+         <Navbar />
          <Banner />
          <Stats />
          <Features />

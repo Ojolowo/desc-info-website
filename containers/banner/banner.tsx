@@ -19,7 +19,7 @@ const Banner = () => {
          <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
             {isOpen && (
                <CustomModal handleClose={handleClose}>
-                  <JoinForm />
+                  <JoinForm handleClose={handleClose} />
                </CustomModal>
             )}
          </AnimatePresence>

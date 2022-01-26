@@ -10,7 +10,7 @@ export const NavbarWrapper = styled.header`
       height: 100%;
       width: 100%;
       background: rgba(0, 0, 0, 0.4);
-      z-index: 1000;
+      z-index: 50;
    }
 
    .toggled .line1 {
@@ -99,7 +99,7 @@ export const NavbarWrapper = styled.header`
    }
 
    .more-icon {
-      z-index: 20000;
+      z-index: 90;
       position: fixed;
       cursor: pointer;
       right: 3em;

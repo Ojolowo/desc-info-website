@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { addDoc, collection } from "firebase/firestore";
 import { useForm, Controller } from "react-hook-form";
 import { Input } from "components/input";
 import { SelectInput } from "components/select";
 import { TextBlock, TextBrief, TextHeading } from "components/typography";
 import { InputWrapper } from "styles/form";
+import { db } from "utils/firebase";
 import { specializations } from "utils/specializations";
 import { FormWrapper, Svg } from "./form.styles";
 import { IJoinForm } from "./i-forn";
 import { schema } from "./join-form.schema";
 
-const JoinForm = () => {
+const JoinForm = ({ handleClose }) => {
    const [isLoading, setIsLoading] = useState(false);
 
    const {
@@ -24,9 +26,17 @@ const JoinForm = () => {
       mode: "onChange",
    });
 
-   const onSubmit = (values) => {
-      setIsLoading(true);
-      console.log(values);
+   const onSubmit = async (values) => {
+      try {
+         setIsLoading(true);
+         await addDoc(collection(db, "members"), values);
+         alert("successful");
+         handleClose();
+      } catch (error) {
+         alert(error);
+      } finally {
+         setIsLoading(false);
+      }
    };
 
    function validate() {
@@ -104,26 +114,31 @@ const JoinForm = () => {
                            placeholder="Select Specialization"
                            onChange={(data: any) => onChange(data?.value)}
                            required={true}
+                           error={errors.specialization?.message}
                            options={specializations}
-                           defaultValue={specializations[0]}
+                           defaultValue={null}
                         />
                      </>
                   )}
                />
             </InputWrapper>
             <InputWrapper>
-               <Input
+               <button
                   type="submit"
                   id="btn"
-                  value="Sign Up Now"
                   disabled={validate()}
                   style={{
+                     width: "100%",
+                     height: 50,
                      background: "#08072e",
+                     opacity: isLoading ? 0.5 : 1,
                      borderRadius: 6,
                      color: "#fff",
-                     cursor: `${validate() ? "not-allowed" : "cursor"}`,
+                     cursor: `${isLoading ? "not-allowed" : "pointer"}`,
                   }}
-               />
+               >
+                  Sign Up Now
+               </button>
             </InputWrapper>
          </form>
       </FormWrapper>
